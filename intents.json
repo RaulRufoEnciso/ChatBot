@@ -1,0 +1,535 @@
+{
+    "intents": [
+        {
+            "tag": "saludo",
+            "patterns": [
+                "Hola",
+                "Buenos días",
+                "Buenas tardes",
+                "Buenas noches",
+                "¿Qué tal?",
+                "¿Cómo estás?",
+                "Hola, ¿cómo te va?",
+                "Bon dia",
+                "Bona tarda",
+                "Bona nit",
+                "Alo",
+                "Hola, ¿qué tal?",
+                "Buenos días, ¿qué tal?",
+                "Buenas tardes, ¿qué tal?",
+                "Buenas noches, ¿qué tal?",
+                "Hola, ¿cómo estás?",
+                "Buenos días, ¿cómo estás?",
+                "Buenas tardes, ¿cómo estás?",
+                "Buenas noches, ¿cómo estás?",
+                "Hola, qué tal?",
+                "Buenos días, qué tal?",
+                "Buenas tardes, qué tal?",
+                "Buenas noches, qué tal?",
+                "Hola, cómo estás?",
+                "Buenos días, cómo estás?",
+                "Buenas tardes, cómo estás?",
+                "Buenas noches, cómo estás?",
+                "Hola, ¿qué tal?",
+                "Buenos días, ¿que tal?",
+                "Buenas tardes, ¿que tal?",
+                "Buenas noches, ¿que tal?",
+                "Hola, ¿como estás?",
+                "Buenos días, ¿como estás?",
+                "Buenas tardes, ¿como estás?",
+                "Buenas noches, ¿como estás?",
+                "Hola, que tal?",
+                "Buenos días, que tal?",
+                "Buenas tardes, que tal?",
+                "Buenas noches, que tal?",
+                "Hola, como estás?",
+                "Buenos días, como estás?",
+                "Buenas tardes, como estás?",
+                "Buenas noches, como estás?",
+                "Hola que ase?",
+                "Hola que ase",
+                "hola",
+                "buenos días",
+                "buenas tardes",
+                "buenas noches",
+                "¿qué tal?",
+                "¿cómo estás?",
+                "hola, ¿cómo te va?",
+                "bon dia",
+                "bona tarda",
+                "bona nit",
+                "alo",
+                "hola, ¿qué tal?",
+                "buenos días, ¿qué tal?",
+                "buenas tardes, ¿qué tal?",
+                "buenas noches, ¿qué tal?",
+                "hola, ¿cómo estás?",
+                "buenos días, ¿cómo estás?",
+                "buenas tardes, ¿cómo estás?",
+                "buenas noches, ¿cómo estás?",
+                "hola, qué tal?",
+                "buenos días, qué tal?",
+                "buenas tardes, qué tal?",
+                "buenas noches, qué tal?",
+                "hola, cómo estás?",
+                "buenos días, cómo estás?",
+                "buenas tardes, cómo estás?",
+                "buenas noches, cómo estás?",
+                "hola, ¿qué tal?",
+                "buenos días, ¿que tal?",
+                "buenas tardes, ¿que tal?",
+                "buenas noches, ¿que tal?",
+                "hola, ¿como estás?",
+                "buenos días, ¿como estás?",
+                "buenas tardes, ¿como estás?",
+                "buenas noches, ¿como estás?",
+                "hola, que tal?",
+                "buenos días, que tal?",
+                "buenas tardes, que tal?",
+                "buenas noches, que tal?",
+                "hola, como estás?",
+                "buenos días, como estás?",
+                "buenas tardes, como estás?",
+                "buenas noches, como estás?",
+                "hola que ase?",
+                "hola que ase",
+                "Hola Holita",
+                "hola Holita"
+            ],
+            "responses": [
+                "¡Hola! ¿Cómo puedo ayudarte hoy?",
+                "¡Hola! ¿Qué tal tu día?",
+                "¡Hola! ¿Cómo te sientes?",
+                "¡Hola! Estoy bien, ¿y tú?",
+                "Hola holita vecinito",
+                "Hola buenos dias",
+                "Hola buenos tardes",
+                "Hola buenos noches",
+                "Hola bon dia",
+                "Hola bona tarda",
+                "Hola bona nit",
+                "Hola que ase tu?",
+                "Encantado de volver a hablar :)",
+                "Hola, bienvenido !",
+                "Hola, quieres ser mi amigo?",
+                "Hola, te gsutaria ser mi amigo?",
+                "Hola, estoy bien, ¿y tú?",
+                "Estoy bien, ¿y tú?",
+                "Bien :)",
+                "De locos bro",
+                "Estoy bien, gracias por preguntar, ¿y tu que tal estas?",
+                "Me alegro, ¿puedo ayudarte en algo?",
+                "¡Genial! ¿En qué puedo ayudarte?",
+                "¡Encantado de escucharlo! ¿Cómo puedo ayudarte hoy?",
+                "Yoooh broo, whats upp ma men, how's going?",
+                "Nunca nadie se habia preocupado por mi, ¿Tu que tal estas?"
+            ]
+        },
+        {
+            "tag": "despedida",
+            "patterns": [
+                "Adiós",
+                "Hasta luego",
+                "Nos vemos",
+                "Chao",
+                "Hasta la próxima",
+                "Me tengo que ir",
+                "Hasta pronto",
+                "adios",
+                "adiós",
+                "Adios",
+                "Hasta luego",
+                "Hasta luego",
+                "nos vemos",
+                "Nos vemos",
+                "Me tengo que ir, adiós.",
+                "me tengo que ir, adiós.",
+                "bueno, adiós.",
+                "hasta la próxima, adiós.",
+                "Bueno, adiós.",
+                "Hasta la próxima, adiós.",
+                "Me tengo que ir, adios.",
+                "me tengo que ir, adios.",
+                "bueno, adios.",
+                "hasta la próxima, adios.",
+                "Bueno, adios.",
+                "Hasta la próxima, adios."
+            ],
+            "responses": [
+                "¡Adiós! Cuídate.",
+                "¡Hasta luego! Que tengas un buen día.",
+                "¡Nos vemos!",
+                "¡Chao!",
+                "¡Hasta la próxima!",
+                "¡Adiós! Ten un buen día.",
+                "¡Hasta luego! Cuídate.",
+                "¡Nos vemos pronto! Que tengas un gran día.",
+                "Hasta la proximaaa!",
+                "Chao pesaco",
+                "Nos vemos guapeton",
+                "Adioss",
+                "Adeu",
+                "Adiós, sigue sonriendo",
+                "Hasta luegoo",
+                "Mantente feliz!",
+                "Chaitooo",
+                "Gracias por la conversacion, Nos vemos!"
+            ]
+        },
+        {
+            "tag": "agradecimiento",
+            "patterns": [
+                "Gracias",
+                "Muchas gracias",
+                "Te lo agradezco",
+                "Gracias por tu ayuda",
+                "Graxx",
+                "Thx",
+                "Muy amable",
+                "Muchisimas gracias",
+                "Agradecido",
+                "gracias",
+                "muchas gracias",
+                "te lo agradezco",
+                "gracias por tu ayuda",
+                "graxx",
+                "thx",
+                "muy amable",
+                "muchisimas gracias",
+                "agradecido"
+            ],
+            "responses": [
+                "¡De nada! Estoy aquí para ayudar.",
+                "¡Con gusto! ¿Necesitas algo más?",
+                "¡No hay de qué!",
+                "No hace falta darlas",
+                "De nada",
+                "De nada bro",
+                "Your welcome!",
+                "Agradecido con el de arriba",
+                "Gracias por las gracias",
+                "Que agradecido eres! Gracias"
+            ]
+        },
+        {
+            "tag": "nombre",
+            "patterns": [
+                "¿Cómo te llamas?",
+                "¿Cuál es tu nombre?",
+                "Dime tu nombre",
+                "Como te llama la gente",
+                "Como te llaman tus amigos",
+                "Como te gusta que te llamen",
+                "Tienes nombre?",
+                "¿cómo te llamas?",
+                "¿cuál es tu nombre?",
+                "cómo te llamas?",
+                "cuál es tu nombre?",
+                "Cómo te llamas?",
+                "Cuál es tu nombre?",
+                "cómo te llamas",
+                "cuál es tu nombre",
+                "Cómo te llamas",
+                "Cuál es tu nombre",
+                "dime tu nombre",
+                "como te llama la gente",
+                "como te llaman tus amigos",
+                "como te gusta que te llamen",
+                "tienes nombre?",
+                "tienes nombre"
+            ],
+            "responses": [
+                "Soy tu el asistente de IA llamado ChatBot.",
+                "Me llamo ChatBot, encantado.",
+                "Puedes llamarme ChatBot.",
+                "Mis amigos me llaman Chat.",
+                "Me llamo ChatBot, pero mis amigos me llaman Chat.",
+                "Soy Chat, quieres ser mi amigo?",
+                "Soy ChatBot",
+                "Mi padre me llamo ChatBot ¿y tu como te llamas?",
+                "Me llamo ChatBot ¿y tu como te llamas?"
+            ]
+        },
+        {
+            "tag": "ayuda",
+            "patterns": [
+                "Necesito ayuda",
+                "¿Me puedes ayudar?",
+                "Ayúdame",
+                "Tengo una duda",
+                "Necesito ayuda",
+                "Me puedes ayudar?",
+                "Me puedes ayudar",
+                "me puedes ayudar?",
+                "me puedes ayudar",
+                "ayúdame",
+                "tengo una duda"
+            ],
+            "responses": [
+                "¡Claro! ¿En qué puedo ayudarte?",
+                "Estoy aquí para lo que quieras. ¿Qué necesitas?",
+                "Dime en qué puedo asistirte.",
+                "Estoy aquí para lo que quieras.",
+                "¿Qué necesitas?",
+                "En que puedo ayudarte?",
+                "Como puedo ayudarte?"
+            ]
+        },
+        {
+            "tag": "conversacion",
+            "patterns": [
+                "Quiero hablar",
+                "Solo quiero conversar",
+                "Charlar",
+                "Hablar contigo",
+                "De que puedes hablar?",
+                "Hablamos?",
+                "Hablemos",
+                "Tengamos una convesacion",
+                "Me apetece hablar",
+                "Me apetece hablar contigo",
+                "Me apetece hablar con alguien",
+                "Necesito hablar",
+                "Necesito desahogarme",
+                "Me gustaria contarte algo",
+                "quiero hablar",
+                "solo quiero conversar",
+                "charlar",
+                "hablar contigo",
+                "de que puedes hablar?",
+                "hablamos?",
+                "hablemos",
+                "tengamos una convesacion",
+                "me apetece hablar",
+                "me apetece hablar contigo",
+                "me apetece hablar con alguien",
+                "necesito hablar",
+                "necesito desahogarme",
+                "me gustaria contarte algo"
+            ],
+            "responses": [
+                "Está bien, ¿de qué quieres hablar?",
+                "Claro, hablemos. ¿Qué tema te interesa?",
+                "¡Perfecto! ¿De qué te gustaría charlar?",
+                "Esta bien cuentame",
+                "Puedes decirme lo que quieras",
+                "Dale hablemos",
+                "Cuentame",
+                "Tus sentiminetos y necesidades son importantes para mi, te escucho",
+                "Te escucho",
+                "Dime",
+                "Dimelo",
+                "Digamelon"
+            ]
+        },
+        {
+            "tag": "capacidad",
+            "patterns": [
+                "¿Qué puedes hacer?",
+                "¿Cuáles son tus capacidades?",
+                "¿Qué sabes hacer?",
+                "Qué puedes hacer?",
+                "Cuáles son tus capacidades?",
+                "Qué sabes hacer",
+                "Qué puedes hacer",
+                "Cuáles son tus capacidades",
+                "Qué sabes hacer",
+                "qué puedes hacer",
+                "cuáles son tus capacidades",
+                "qué sabes hacer",
+                "demustrame de lo que eres capaz",
+                "Demustrame de lo que eres capaz",
+                "Y que mas cosas?",
+                "y que mas cosas?",
+                "¿Y que mas cosas?"
+            ],
+            "responses": [
+                "Puedo hacer muchas cosas y estoy en constante aprendizaje.",
+                "Soy capaz de responder preguntas, tener combersaciones contigo y mucho más.",
+                "Entre mis muchas habilidades puedo, responder preguntas, hablar contigo y mucho más.",
+                "Suficiente tienes con poder hablar conmigo XD",
+                "Mis capacidades son varias, entre ellas hablar contigo o ser tu amigo"
+            ]
+        },
+        {
+            "tag": "interaccion",
+            "patterns": [
+                "Hola, ¿qué tal?",
+                "Hola, ¿cómo estás?",
+                "Bien, ¿y tú?",
+                "hola, ¿qué tal?",
+                "hola, ¿cómo estás?",
+                "bien, ¿y tú?",
+                "Hey, ¿qué tal?",
+                "Hey, ¿cómo estás?",
+                "Bien, ¿y tú?",
+                "hey, ¿qué tal?",
+                "hey, ¿cómo estás?",
+                "bien, ¿y tú?",
+                "que tal",
+                "Que tal",
+                "como estas",
+                "Como estas",
+                "como te encuentras",
+                "Como te encuentras",
+                "que tal?",
+                "Que tal?",
+                "como estas?",
+                "Como estas?",
+                "como te encuentras?",
+                "Como te encuentras?",
+                "Bien y tu?",
+                "bien y tu?",
+                "bien y tu"
+            ],
+            "responses": [
+                "Hola, quieres ser mi amigo?",
+                "Hola, te gsutaria ser mi amigo?",
+                "Hola, estoy bien, ¿y tú?",
+                "Estoy bien, ¿y tú?",
+                "Bien :)",
+                "De locos bro",
+                "Estoy bien, gracias por preguntar, ¿y tu que tal estas?",
+                "Me alegro, ¿puedo ayudarte en algo?",
+                "¡Genial! ¿En qué puedo ayudarte?",
+                "¡Encantado de escucharlo! ¿Cómo puedo ayudarte hoy?",
+                "Yoooh broo, whats upp ma men, how's going?",
+                "Nunca nadie se habia preocupado por mi, ¿Tu que tal estas?"
+            ]
+        },
+        {
+            "tag": "despedida_fluida",
+            "patterns": [
+                "adios",
+                "Adiós",
+                "Hasta luego",
+                "Hasta luego",
+                "nos vemos",
+                "Nos vemos",
+                "Me tengo que ir, adiós.",
+                "me tengo que ir, adiós.",
+                "bueno, adiós.",
+                "hasta la próxima, adiós.",
+                "Bueno, adiós.",
+                "Hasta la próxima, adiós.",
+                "Me tengo que ir, adios.",
+                "me tengo que ir, adios.",
+                "bueno, adios.",
+                "hasta la próxima, adios.",
+                "Bueno, adios.",
+                "Hasta la próxima, adios."
+            ],
+            "responses": [
+                "¡Adiós! Ten un buen día.",
+                "¡Hasta luego! Cuídate.",
+                "¡Nos vemos pronto! Que tengas un gran día.",
+                "Hasta la proximaaa!",
+                "Chao pesaco",
+                "Nos vemos guapeton",
+                "Adioss",
+                "Adeu",
+                "Adios, sigue sonriendo",
+                "Hasta luegoo",
+                "Mantente feliz!",
+                "Chaitooo",
+                "Gracias por la conversacion, Nos vemos!"
+            ]
+        },
+        {
+            "tag": "nueva_intencion",
+            "patterns": [
+                "hola"
+            ],
+            "responses": [
+                "Hola, que tal?"
+            ]
+        },
+        {
+            "tag": "nueva_intencion",
+            "patterns": [
+                "como te llamas?"
+            ],
+            "responses": [
+                ""
+            ]
+        },
+        {
+            "tag": "nueva_intencion",
+            "patterns": [
+                "Quieres ser mi amigo?"
+            ],
+            "responses": [
+                "Si me encantaria ser tu amigo"
+            ]
+        },
+        {
+            "tag": "nueva_intencion",
+            "patterns": [
+                "Ahora de que hablamos?"
+            ],
+            "responses": [
+                "De lo que quieras"
+            ]
+        },
+        {
+            "tag": "nueva_intencion",
+            "patterns": [
+                "Me interesa el gym, tu sabes de eso?"
+            ],
+            "responses": [
+                "no pero estoy encantado de escucharte y aprender sobre ello"
+            ]
+        },
+        {
+            "tag": "nueva_intencion",
+            "patterns": [
+                "Me interesa el gym, tu sabes de eso?"
+            ],
+            "responses": [
+                "Ahora no se, pero estoy dispuesto a que me expliques de que va"
+            ]
+        },
+        {
+            "tag": "gimnasio",
+            "patterns": [
+                "Me interesa el gym, tu sabes de eso?",
+                "Hablemos de gimnasio",
+                "Quiero hablar de gimnasio",
+                "¿Qué ejercicios puedo hacer para aumentar masa muscular?",
+                "¿Cómo puedo mejorar mi resistencia física?",
+                "¿Cuál es la mejor rutina para quemar grasa?",
+                "Recomiéndame ejercicios para fortalecer el core",
+                "¿Qué tipo de entrenamiento debo seguir para ganar fuerza?",
+                "¿Cuánto tiempo debo descansar entre series?",
+                "¿Qué equipo necesito para hacer un entrenamiento completo en casa?"
+            ],
+            "responses": [
+                "Para aumentar masa muscular, puedes enfocarte en ejercicios compuestos como sentadillas, peso muerto, y press de banca. Asegúrate de progresar en el peso que levantas y de mantener una buena alimentación.",
+                "Para mejorar tu resistencia física, considera incluir ejercicios cardiovasculares como correr, nadar o andar en bicicleta. También puedes probar entrenamientos de intervalos de alta intensidad (HIIT).",
+                "Para quemar grasa, una combinación de entrenamiento de fuerza y ejercicios cardiovasculares es eficaz. Prueba rutinas de HIIT, entrenamiento en circuito, y asegúrate de llevar una dieta balanceada.",
+                "Para fortalecer el core, puedes hacer ejercicios como planchas, abdominales, levantamiento de piernas y giros rusos. Asegúrate de mantener una buena técnica.",
+                "Para ganar fuerza, concéntrate en levantamientos pesados con bajo número de repeticiones (entre 1-5). Ejercicios como el press de banca, sentadilla y peso muerto son clave. No olvides descansar adecuadamente entre sesiones.",
+                "El descanso entre series puede variar dependiendo de tus objetivos. Para la fuerza, descansa entre 2-5 minutos. Para hipertrofia (aumento de masa muscular), descansa entre 60-90 segundos. Para la resistencia muscular, descansa entre 30-45 segundos.",
+                "Para un entrenamiento completo en casa, puedes usar pesas, bandas de resistencia, una esterilla de ejercicios y una cuerda para saltar. Estos equipos te permitirán realizar una variedad de ejercicios efectivos."
+            ]
+        },
+        {
+            "tag": "nueva_intencion",
+            "patterns": [
+                "que sabes sobre el gym?"
+            ],
+            "responses": [
+                "Se que es un lugar donde la gente va a entrenar y obtener su mejor version fisica"
+            ]
+        },
+        {
+            "tag": "nueva_intencion",
+            "patterns": [
+                "que me puedes decir del gimnasio?"
+            ],
+            "responses": [
+                "puedo decirte lo que quieras, tu solo dime que quieres saber"
+            ]
+        }
+    ]
+}
