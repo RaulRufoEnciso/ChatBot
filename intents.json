@@ -674,6 +674,33 @@
             "responses": [
                 "Si me encantaria, dime que quieres saber :)"
             ]
+        },
+        {
+            "tag": "Hola",
+            "patterns": [
+                "Hola"
+            ],
+            "responses": [
+                "Hola encantado, ¿Que tal?"
+            ]
+        },
+        {
+            "tag": "Podemos hablar de gimnasio?",
+            "patterns": [
+                "Podemos hablar de gimnasio?"
+            ],
+            "responses": [
+                "Si, simepre estoy dispuesto a hablar de cualquier cosa"
+            ]
+        },
+        {
+            "tag": "Bueno, y que sabes del gimnasio?",
+            "patterns": [
+                "Bueno, y que sabes del gimnasio?"
+            ],
+            "responses": [
+                "Pues se diversas cosas, que necesitas saber?"
+            ]
         }
     ]
 }
