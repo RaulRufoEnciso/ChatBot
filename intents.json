@@ -530,6 +530,150 @@
             "responses": [
                 "puedo decirte lo que quieras, tu solo dime que quieres saber"
             ]
+        },
+        {
+            "tag": "nueva_intencion",
+            "patterns": [
+                "hola"
+            ],
+            "responses": [
+                "Hola, como estas?"
+            ]
+        },
+        {
+            "tag": "Hola",
+            "patterns": [
+                "Hola"
+            ],
+            "responses": [
+                ""
+            ]
+        },
+        {
+            "tag": "Como estas?",
+            "patterns": [
+                "Como estas?"
+            ],
+            "responses": [
+                "Bien y tu?"
+            ]
+        },
+        {
+            "tag": "bien, gracias por preguntar",
+            "patterns": [
+                "bien, gracias por preguntar"
+            ],
+            "responses": [
+                ""
+            ]
+        },
+        {
+            "tag": "que sabes sobre gimnasio?",
+            "patterns": [
+                "que sabes sobre gimnasio?"
+            ],
+            "responses": [
+                "se algunas cosas, sobre que quieres saber?"
+            ]
+        },
+        {
+            "tag": "dame informacion sobre el gy",
+            "patterns": [
+                "dame informacion sobre el gy"
+            ],
+            "responses": [
+                ""
+            ]
+        },
+        {
+            "tag": "Hola",
+            "patterns": [
+                "Hola"
+            ],
+            "responses": [
+                "Bien y tu?"
+            ]
+        },
+        {
+            "tag": "Bien encantado",
+            "patterns": [
+                "Bien encantado"
+            ],
+            "responses": [
+                ""
+            ]
+        },
+        {
+            "tag": "De que podemos hablar?",
+            "patterns": [
+                "De que podemos hablar?"
+            ],
+            "responses": [
+                "De lo que quieras, siempre estoy dispuesto a aprender con mis charlas."
+            ]
+        },
+        {
+            "tag": "De que podemos hablar?",
+            "patterns": [
+                "De que podemos hablar?"
+            ],
+            "responses": [
+                "De que te apetece hablar a ti?"
+            ]
+        },
+        {
+            "tag": "Hablemos de gimnasio",
+            "patterns": [
+                "Hablemos de gimnasio"
+            ],
+            "responses": [
+                "Sii, me encanta ese tema. Comentame tus dudas :)"
+            ]
+        },
+        {
+            "tag": "que mas sabes de gimnasio?",
+            "patterns": [
+                "que mas sabes de gimnasio?"
+            ],
+            "responses": [
+                "Se muchas mas cosas, puedes preguntar lo que quieras"
+            ]
+        },
+        {
+            "tag": "bueno gracias por hablar conmigo!",
+            "patterns": [
+                "bueno gracias por hablar conmigo!"
+            ],
+            "responses": [
+                "De nada! "
+            ]
+        },
+        {
+            "tag": "hola",
+            "patterns": [
+                "hola"
+            ],
+            "responses": [
+                "Genial gracias"
+            ]
+        },
+        {
+            "tag": "hola",
+            "patterns": [
+                "hola"
+            ],
+            "responses": [
+                "Hola, me gusta hablar con gente nueva :)"
+            ]
+        },
+        {
+            "tag": "Podemos hablar de gimnasio?",
+            "patterns": [
+                "Podemos hablar de gimnasio?"
+            ],
+            "responses": [
+                "Si me encantaria, dime que quieres saber :)"
+            ]
         }
     ]
 }
