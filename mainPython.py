@@ -5,9 +5,17 @@ import spacy
 import tensorflow as tf
 from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import Dense, Dropout
+from tensorflow.keras.callbacks import Callback
+import matplotlib.pyplot as plt
 
+class AccuracyHistory(Callback):
+    def on_train_begin(self, logs={}):
+        self.acc = []
 
+    def on_epoch_end(self, batch, logs={}):
+        self.acc.append(logs.get('accuracy'))
 
+accuracy_history = AccuracyHistory()
 
 # Cargar modelo spaCy
 nlp = spacy.load('en_core_web_sm')
@@ -72,9 +80,12 @@ def crear_modelo(input_shape, output_shape):
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     return model
 
-def entrenar_modelo(model, train_x, train_y, epochs=500, batch_size=8):
-    early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=20, restore_best_weights=True)
-    model.fit(train_x, train_y, epochs=epochs, batch_size=batch_size, validation_split=0.2, callbacks=[early_stopping])
+def entrenar_modelo(model, train_x, train_y, epochs=500, batch_size=8, accuracy_history=None):
+    early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=50, restore_best_weights=True)
+    if accuracy_history:
+        model.fit(train_x, train_y, epochs=epochs, batch_size=batch_size, validation_split=0.2, callbacks=[early_stopping, accuracy_history])
+    else:
+        model.fit(train_x, train_y, epochs=epochs, batch_size=batch_size, validation_split=0.2, callbacks=[early_stopping])
     return model
 
 def guardar_modelo(model, file_path='chatbot_model.keras'):
@@ -90,11 +101,11 @@ def clean_up_sentence(sentence):
 def bow(sentence, words):
     sentence_words = clean_up_sentence(sentence)
     bag = [1 if word in sentence_words else 0 for word in words]
-    return np.pad(bag, (0, len(words) - len(bag)))  # Asegurar que la bolsa de palabras tenga la longitud correcta
+    return np.pad(bag, (0, len(words) - len(bag))) 
 
 def predict_class(sentence, model, words, classes):
     p = bow(sentence, words)
-    p = np.pad(p, (0, len(words) - len(p)))  # Asegurarse de que la entrada tenga la longitud correcta
+    p = np.pad(p, (0, len(words) - len(p))) 
     res = model.predict(np.array([p]))[0]
     results = [[i, r] for i, r in enumerate(res) if r > 0.25]
     results.sort(key=lambda x: x[1], reverse=True)
@@ -123,9 +134,61 @@ def retrain_model():
     train_x, train_y = preparar_entrenamiento(words, classes, documents)
 
     model = crear_modelo(len(train_x[0]), len(train_y[0]))
-    model = entrenar_modelo(model, train_x, train_y)
+    model = entrenar_modelo(model, train_x, train_y, accuracy_history=accuracy_history)
     guardar_modelo(model)
     return words, classes, model
+
+def valoracion_acuracy():
+    # Reentrenar el modelo
+    words, classes, model = retrain_model()
+    
+    if not accuracy_history.acc:
+        print("No se han registrado datos de precisión aún.")
+        return
+    
+    ultimo_acuracy = accuracy_history.acc[-1]
+    media_acuracy = np.mean(accuracy_history.acc)
+    historial_acuracy = accuracy_history.acc
+    
+    # Obtener métricas de pérdida
+    historial_perdida = model.history.history['loss']
+    historial_perdida_val = model.history.history['val_loss']
+    
+    # Obtener métricas de precisión de validación
+    historial_acuracy_val = model.history.history['val_accuracy']
+    
+    print(f'Último accuracy: {ultimo_acuracy:.4f}')
+    print(f'Media de accuracy: {media_acuracy:.4f}')
+    print(f'Total epochs: {len(historial_acuracy)}')
+    print(f'Historial de accuracy: {historial_acuracy}')
+    
+    print(f'Media de pérdida: {np.mean(historial_perdida):.4f}')
+    print(f'Historial de pérdida: {historial_perdida}')
+    print(f'Historial de pérdida de validación: {historial_perdida_val}')
+    print(f'Historial de accuracy de validación: {historial_acuracy_val}')
+    
+    # Gráfico de accuracy y val_accuracy
+    plt.figure(figsize=(12, 5))
+    
+    plt.subplot(1, 2, 1)
+    plt.plot(historial_acuracy, label='Accuracy')
+    plt.plot(historial_acuracy_val, label='Val Accuracy')
+    plt.xlabel('Epoch')
+    plt.ylabel('Accuracy')
+    plt.legend()
+    plt.title('Accuracy y Val Accuracy')
+    
+    plt.subplot(1, 2, 2)
+    plt.plot(historial_perdida, label='Pérdida')
+    plt.plot(historial_perdida_val, label='Val Pérdida')
+    plt.xlabel('Epoch')
+    plt.ylabel('Pérdida')
+    plt.legend()
+    plt.title('Pérdida y Val Pérdida')
+    
+    plt.tight_layout()
+    plt.show()
+
 
 # Inicializar datos y modelo
 data = cargar_datos()
@@ -138,18 +201,21 @@ try:
 except:
     print("No se encontró un modelo existente. Entrenando un nuevo modelo.")
     model = crear_modelo(len(train_x[0]), len(train_y[0]))
-    model = entrenar_modelo(model, train_x, train_y)
+    model = entrenar_modelo(model, train_x, train_y, accuracy_history=accuracy_history)
     guardar_modelo(model)
 
 print("¡Chatbot listo para hablar contigo!")
 
-# # Reentrenar el modelo después de los cambios
-# model = crear_modelo(len(train_x[0]), len(train_y[0]))
-# model = entrenar_modelo(model, train_x, train_y)
-# guardar_modelo(model)
-
 while True:
     message = input("Tú: ")
+    if message.lower() == "valoracion acuracy":
+        valoracion_acuracy()
+        break
+
+    if message.lower() == "ema":
+        retrain_model()
+        continue
+
     ints = predict_class(message, model, words, classes)
 
     if len(ints) > 0:  # Verificar que la lista ints no esté vacía
@@ -172,4 +238,3 @@ while True:
             print("¡Genial! Continuemos.")
     else:
         print("No se pudo clasificar el mensaje. Por favor, intenta de nuevo.")
-
